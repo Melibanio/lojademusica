@@ -1,17 +1,1 @@
-/* Global Styles - Loja de Música */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* You can add global styles to this file, and also import other style files */
