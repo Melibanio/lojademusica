@@ -1,0 +1,47 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Violão Clássico",
+      "categoria": "Cordas",
+      "preco": 450,
+      "estoque": 10
+    },
+    {
+      "id": 2,
+      "nome": "Guitarra Elétrica",
+      "categoria": "Cordas",
+      "preco": 1200,
+      "estoque": 5
+    },
+    {
+      "id": 3,
+      "nome": "Teclado Digital",
+      "categoria": "Teclas",
+      "preco": 800,
+      "estoque": 8
+    },
+    {
+      "id": 4,
+      "nome": "Bateria Acústica",
+      "categoria": "Percussão",
+      "preco": 2500,
+      "estoque": 3
+    },
+    {
+      "nome": "Piano de corda",
+      "categoria": "Percussão",
+      "preco": 5000,
+      "estoque": 32,
+      "id": 5
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "nome": "Admin",
+      "email": "admin@lojamusica.com",
+      "senha": "admin123"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <span>🎵</span>
+      <h2>Login - Área Administrativa</h2>
+    </div>
+
+    @if (mensagemErro) {
+      <div class="mensagem-erro">{{ mensagemErro }}</div>
+    }
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        class="input-simples"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        type="password"
+        [(ngModel)]="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        class="input-simples"
+      />
+    </div>
+
+    <button class="btn-login" (click)="login()">Entrar</button>
+
+    <p class="login-hint">
+      Use: admin&#64;lojamusica.com / admin123
+    </p>
+  </div>
+</div>

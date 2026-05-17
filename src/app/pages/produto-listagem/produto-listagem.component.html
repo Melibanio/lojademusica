@@ -1,0 +1,55 @@
+<div class="content-container">
+  <div class="page-header">
+    <h1>📦 Listagem de Produtos</h1>
+  </div>
+
+  @if (mensagem) {
+    <div class="mensagem" [class.sucesso]="mensagemTipo === 'sucesso'" [class.erro]="mensagemTipo === 'erro'">
+      {{ mensagem }}
+    </div>
+  }
+
+  @if (carregando) {
+    <div class="carregando">Carregando produtos...</div>
+  } @else {
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Preço (R$)</th>
+          <th>Estoque</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (produto of listaProdutos; track produto.id) {
+          <tr>
+            <td>{{ produto.id }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>{{ produto.preco | number:'1.2-2' }}</td>
+            <td>{{ produto.estoque }}</td>
+            <td class="acoes">
+              <button
+                class="btn-editar"
+                [routerLink]="['/produtos/editar', produto.id]"
+              >Editar</button>
+              <button
+                class="btn-excluir"
+                (click)="excluir(produto.id)"
+              >Excluir</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="6" class="sem-dados">Nenhum produto cadastrado.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <button class="btn-incluir" routerLink="/produtos/novo">+ Incluir Novo Produto</button>
+  }
+</div>
